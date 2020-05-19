@@ -1,0 +1,5 @@
+1) Selectors
+    app-cars = <app-cars></app-cars>
+    .app-cars = class = "app-cars"
+    [app-cars] = <div app-cars></div>
+2)
