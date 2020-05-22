@@ -1,7 +1,9 @@
-<div class="container">
-  Enter name: <input class="form-control" type = "text" [(ngModel)] = "carName"/><br/>
-  Enter year: <input class="form-control" type = "text" [(ngModel)] = "carYear"/><br/>
-  <button type="button" class="btn btn-secondary btn-lg" (click)="addNewCar()" [disabled]="validCar">Save</button>
+<p>Форма добавления машины</p>
+<hr/>
+<app-add-car (onAddCar) = "updateCarList($event)"></app-add-car>
+
+<div class="list-group">
+  <app-car *ngFor="let car of carArr" [carItem] = "car">
+    <div class="alert-success">Доступна для покупки</div>
+  </app-car>
 </div>
-<p *ngFor="let car of carArr">{{car.name}}: {{car.year}}</p>
-<app-car></app-car>
