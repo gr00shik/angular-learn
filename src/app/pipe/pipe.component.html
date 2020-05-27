@@ -1,0 +1,20 @@
+<div class="col-xs-8 col-xs-offset-2">
+<!--  <h2>{{ name | lowercase }}</h2>-->
+<!--  <h2>{{ name | slice:0:4 }}</h2>-->
+<!--  <h2>{{ name | slice:0:4 | uppercase }}</h2>-->
+<!--  <h2>{{ pi | number:'1.10' }}</h2>-->
+<!--  <h2>{{ money | currency:'EUR' }}</h2>-->
+<!--  <h2>{{ date | date:'yyyy-mm-ddThh:mmTZD' }}</h2>-->
+<!--  <h2>{{ object | json }}</h2>-->
+<!--  <h2><pre>{{ object | json }}</pre></h2>-->
+<!--  <h2>{{ money | powPipe:2 }}</h2>-->
+
+   <h1>{{asyncTitle | async }}</h1>
+  <button class="btn btn-primary" (click)="addCar()">Add new car</button>
+  <input class="form-control" [(ngModel)]="search"/>
+  <hr/>
+  <ul class="list-group" >
+    <li class="list-group-item" *ngFor="let car of cars | filter:search:'description'"> {{ car.name }} <i> {{ car.description }}</i> </li>
+  </ul>
+
+</div>

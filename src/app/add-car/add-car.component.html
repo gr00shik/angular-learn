@@ -1,0 +1,13 @@
+{{title}}
+<div class="container row">
+  <div class="col-6">
+    <p [ngStyle]="{'display': 'flex', 'flex-direction': 'row'}">{{inputName}}: <input class="form-control" type="text" [(ngModel)]="carName"/></p>
+    <p [ngStyle]="{'display': 'flex', 'flex-direction': 'row'}">{{inputYear}}: <input class="form-control" type="text" [(ngModel)]="carYear"/></p>
+    <button type="button" class="btn btn-secondary btn-lg" (click)="addNewCar()" [disabled]="!validCar()">Save</button>
+  </div>
+  <div class="col-4" *ngIf="validCar()">
+    Вы ввели имя: {{carName}}<br/>
+    Вы ввели год: {{carYear}}
+  </div>
+
+</div>
